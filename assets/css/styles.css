@@ -1,0 +1,139 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600);
+@import url(http://fonts.googleapis.com/css?family=Raleway:600,700,800);
+
+/* === BASE === */
+html, body {
+  height: 100%;
+}
+body { 
+  font-weight: 300;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #1b4362;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* === LANGUE === */
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.lang-btn {
+  background: rgba(255,255,255,0.9);
+  color: #1b4362;
+  border: 2px solid #1b4362;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.lang-btn:hover { background: #1b4362; color: white; transform: scale(1.05); }
+.lang-btn.active { background: #1b4362; color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+
+/* === TYPOGRAPHIE === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway";
+  font-weight: 200;
+  color: #ffffff;  /* blanc partout */
+}
+h2 { font-size: 36px; }
+
+h2.centered {
+  text-align: center;
+}
+
+/* === HEADER === */
+#headerwrap {
+  background: #1b4362;
+  margin-top: -50px;
+  padding: 120px 0 100px;
+  text-align: center;
+  min-height: 850px;
+}
+
+#portfolio {
+  padding-bottom: 150px;
+}
+
+#headerwrap .icon {
+  color: #ffffff;
+  margin-top: 115px;
+  padding-bottom: 30px;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+/* === GRILLE IMAGES === */
+.col-md-4 { padding-bottom: 20px; }
+.grid figure {
+  margin: 0;
+  position: relative;
+  border: 1px solid #eee;
+}
+.grid figure img {
+  width: 100%;
+  display: block;
+}
+
+/* === HOVER TRANSPARENT === */
+.grid figcaption {
+  background: rgba(27, 67, 98, 0.8) !important;
+  opacity: 0;
+  transition: opacity 0.3s;
+  height: 100%;
+  width: 100%;
+}
+.grid figcaption h5,
+.overlay-text { display: none !important; }
+.grid.overlay:hover figcaption { opacity: 1; }
+
+/* === MODAL === */
+.modal-content {
+  background: #1b4362;
+  color: white;
+  border-radius: 10px;
+}
+.modal-img {
+  display: block;
+  margin: 0 auto 20px auto;  /* centré */
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.modal-desc {
+  font-size: 18px;
+  font-style: italic;
+  margin: 0;
+}
+.modal-dialog-centered { text-align: center; }
+
+/* === FOOTER === */
+#footerwrap {
+  background: #080808;
+  padding: 10px 0;
+  text-align: center;
+}
+
+ul.social-buttons li a {
+  font-size: 18px;
+  color: #ccccccac;
+  margin-right: 12px;
+}
+
+#footerwrap span.copyright {
+  color: #ccccccac;  /* gris clair */
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 769px) {
+  #headerwrap .icon { font-size: 80px; }
+}
